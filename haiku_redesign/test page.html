@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        header {
+            padding: 20px 40px;
+            /*background: gray;*/
+            width: 100%;
+
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: position 10s;
+            -ms-transition: position 10s;
+            -o-transition: position 10s;
+            transition: all 0.5s ease;
+        }
+
+        section {
+            height: 150vh;
+        }
+
+        /*A class used only in the script at bottom of page. That is why it is greyed out. */
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: lightgreen;
+            animation: smoothScroll 1s forwards;
+        }
+
+        section {
+            /*height: 150vh;*/
+            width: 100%;
+            height: 800px;
+            background-color: yellow;
+            margin: 10px auto;
+        }
+
+        @keyframes smoothScroll {
+            0% {
+                transform: translateY(-40px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+<header class="myNav">
+    <nav>
+        <a href="#home"><p id="nav_home">Home</p></a>
+        <a href="#about"><p id="nav_about">About</p></a>
+        <a href="#menu"><p id="nav_menu">Menu</p></a>
+        <a href="#orderonline"><p id="nav_orderonline">OrderOnline</p></a>
+        <a href="#reservations"><p id="nav_reservation">Reservations</p></a>
+    </nav>
+</header>
+<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris erat neque, dictum non leo quis, posuere luctus
+    tellus. Vestibulum maximus neque eu enim ultrices sodales. Cras nec consectetur orci. Mauris nec malesuada urna,
+    convallis pharetra lorem. Vivamus maximus placerat erat, sed sollicitudin elit finibus in. Nullam efficitur ante id
+    quam dignissim porta. Suspendisse ac sapien non nulla efficitur aliquam quis a turpis. Maecenas euismod, dui id
+    dapibus tristique, velit purus tristique magna, a tincidunt felis lacus ac risus. Donec convallis eget dui a
+    tincidunt. Nulla faucibus dapibus ipsum id interdum. Suspendisse eget elit consequat, lacinia tellus ac, viverra
+    nunc. Donec vestibulum tellus at nibh tincidunt, ut elementum erat lobortis. Aenean pellentesque dui eget eros
+    dignissim accumsan. Maecenas eu tortor quis eros elementum tincidunt.
+</section>
+
+<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris erat neque, dictum non leo quis, posuere luctus
+    tellus. Vestibulum maximus neque eu enim ultrices sodales. Cras nec consectetur orci. Mauris nec malesuada urna,
+    convallis pharetra lorem. Vivamus maximus placerat erat, sed sollicitudin elit finibus in. Nullam efficitur ante id
+    quam dignissim porta. Suspendisse ac sapien non nulla efficitur aliquam quis a turpis. Maecenas euismod, dui id
+    dapibus tristique, velit purus tristique magna, a tincidunt felis lacus ac risus. Donec convallis eget dui a
+    tincidunt. Nulla faucibus dapibus ipsum id interdum. Suspendisse eget elit consequat, lacinia tellus ac, viverra
+    nunc. Donec vestibulum tellus at nibh tincidunt, ut elementum erat lobortis. Aenean pellentesque dui eget eros
+    dignissim accumsan. Maecenas eu tortor quis eros elementum tincidunt.
+</section>
+
+
+<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris erat neque, dictum non leo quis, posuere luctus
+    tellus. Vestibulum maximus neque eu enim ultrices sodales. Cras nec consectetur orci. Mauris nec malesuada urna,
+    convallis pharetra lorem. Vivamus maximus placerat erat, sed sollicitudin elit finibus in. Nullam efficitur ante id
+    quam dignissim porta. Suspendisse ac sapien non nulla efficitur aliquam quis a turpis. Maecenas euismod, dui id
+    dapibus tristique, velit purus tristique magna, a tincidunt felis lacus ac risus. Donec convallis eget dui a
+    tincidunt. Nulla faucibus dapibus ipsum id interdum. Suspendisse eget elit consequat, lacinia tellus ac, viverra
+    nunc. Donec vestibulum tellus at nibh tincidunt, ut elementum erat lobortis. Aenean pellentesque dui eget eros
+    dignissim accumsan. Maecenas eu tortor quis eros elementum tincidunt.
+</section>
+
+<script>
+    $(window).scroll(function () {
+        var sticky = $('.myNav'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 40) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+    });
+
+    $(window).scroll(function () {
+        var sticky = $('.myNav'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 50) {
+            sticky.addClass('fixed');
+        }
+        else {
+            sticky.removeClass('fixed');
+
+        }
+    });
+</script>
+</body>
+</html>
